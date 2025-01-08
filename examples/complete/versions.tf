@@ -10,10 +10,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-output "id" {
-  value = azurerm_log_analytics_storage_insights.main.id
-}
+terraform {
+  required_version = "~> 1.0"
 
-output "name" {
-  value = azurerm_log_analytics_storage_insights.main.name
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.77"
+    }
+  }
 }
