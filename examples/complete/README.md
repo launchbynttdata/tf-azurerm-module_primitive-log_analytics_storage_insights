@@ -1,6 +1,6 @@
 # complete
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -52,4 +52,4 @@ No resources.
 | <a name="output_workspace_id"></a> [workspace\_id](#output\_workspace\_id) | The ID of the Log Analytics workspace. |
 | <a name="output_storage_insights_id"></a> [storage\_insights\_id](#output\_storage\_insights\_id) | The ID of the Log Analytics Storage Insights. |
 | <a name="output_storage_insights_name"></a> [storage\_insights\_name](#output\_storage\_insights\_name) | The name of the Log Analytics Storage Insights. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

@@ -55,8 +55,8 @@ module "log_analytics_workspace" {
   name                = module.resource_names["log_analytics_workspace"].minimal_random_suffix
   resource_group_name = module.resource_group.name
   location            = var.region
-  sku                 = var.law_sku
-  retention_in_days   = var.law_retention_in_days
+  sku                 = coalesce(var.law_sku, "PerGB2018")
+  retention_in_days   = coalesce(var.law_retention_in_days, 30)
   tags                = local.tags
 
   depends_on = [module.resource_group]
