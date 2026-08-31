@@ -22,3 +22,4 @@ region                  = "eastus"
 tags = {
   Purpose = "Terratest"
 }
+law_retention_in_days = 30
