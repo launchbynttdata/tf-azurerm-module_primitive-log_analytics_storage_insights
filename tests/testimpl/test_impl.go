@@ -33,11 +33,11 @@ func TestComposableComplete(t *testing.T, ctx types.TestContext) {
 		},
 	}
 
-	resourceGroupName := terraform.Output(t, ctx.TerratestTerraformOptions(), "resource_group_name")
-	workspaceName := terraform.Output(t, ctx.TerratestTerraformOptions(), "workspace_name")
-	workspaceId := terraform.Output(t, ctx.TerratestTerraformOptions(), "workspace_id")
-	storageInsightsId := terraform.Output(t, ctx.TerratestTerraformOptions(), "storage_insights_id")
-	storageInsightsName := terraform.Output(t, ctx.TerratestTerraformOptions(), "storage_insights_name")
+	resourceGroupName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "resource_group_name")
+	workspaceName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "workspace_name")
+	workspaceId := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "workspace_id")
+	storageInsightsId := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "storage_insights_id")
+	storageInsightsName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "storage_insights_name")
 
 	logAnalyticsWorkspaceClient, err := operationalinsights.NewWorkspacesClient(subscriptionID, credential, &options)
 	if err != nil {
